@@ -2,7 +2,7 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
 	"sap/m/MessageBox",
-    "salesorders/util/Config"
+    	"salesorders/util/Config"
 ], function(Controller, JSONModel, MessageBox, Config) {
 	"use strict";
 
