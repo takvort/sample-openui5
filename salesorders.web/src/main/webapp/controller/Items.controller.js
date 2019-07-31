@@ -9,27 +9,27 @@ sap.ui.define([
 	return Controller.extend("salesorders.controller.Items", {
 
 		onInit : function() {
-			var oModel = new JSONModel();
-			oModel.setSizeLimit(Number.MAX_VALUE);
-			this.getView().setModel(oModel, "newItem");
+			var newItemModel = new JSONModel();
+			newItemModel.setSizeLimit(Number.MAX_VALUE);
+			this.getView().setModel(newItemModel, "newItem");
 
 
-			var oModel = new JSONModel();
-			oModel.setSizeLimit(Number.MAX_VALUE);
-			this.getView().setModel(oModel, "items");
+			var itemsModel = new JSONModel();
+			itemsModel.setSizeLimit(Number.MAX_VALUE);
+			this.getView().setModel(itemsModel, "items");
 
 
-			oModel.attachRequestSent(function() {
+			itemsModel.attachRequestSent(function() {
 				this.getView().setBusy(true);
 			}, this);
-			oModel.attachRequestFailed(function() {
+			itemsModel.attachRequestFailed(function() {
 				var messageBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
 				MessageBox.error(messageBundle.getText("generalError"));
 			}, this);
-			oModel.attachRequestCompleted(function() {
+			itemsModel.attachRequestCompleted(function() {
 				this.getView().setBusy(false);
 			}, this);
-			oModel.loadData(Config.serviceUrl + "/items");
+			itemsModel.loadData(Config.serviceUrl + "/items");
 
 			/* Alternatively the model data can be loaded with jQuery.ajax
 			
@@ -41,7 +41,7 @@ sap.ui.define([
 					this.getView().setBusy(true);
 				}
 			}).done(function(data, textStatus, jqXHR){
-				oModel.setData(data);
+				itemsModel.setData(data);
 			}).fail(function(jqXHR, textStatus, errorThrown){
 				var messageBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
 				MessageBox.error(messageBundle.getText("generalError"));
