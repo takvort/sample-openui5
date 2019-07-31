@@ -1,0 +1,24 @@
+{
+	"orderItems": [{
+			"productId": "HT-1007",
+			"productDescription": "Digital Organizer with State-of-the-Art Storage Encryption",
+			"grossAmount": 315,
+			"grossCurrencyCode": "EUR"
+		}, {
+			"productId": "HT-1003",
+			"productDescription": "Notebook Basic 19 with 2,80 GHz quad core, 19\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
+			"grossAmount": 2470,
+			"grossCurrencyCode": "EUR"
+		}, {
+			"productId": "HT-1021",
+			"productDescription": "Digital Organizer with State-of-the-Art Encryption for Storage and Secure Stellite Link",
+			"grossAmount": 745,
+			"grossCurrencyCode": "EUR"
+		}, {
+			"productId": "HT-1002",
+			"productDescription": "Notebook Basic 18 with 2,80 GHz quad core, 18\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
+			"grossAmount": 2355,
+			"grossCurrencyCode": "EUR"
+		}
+	]
+}

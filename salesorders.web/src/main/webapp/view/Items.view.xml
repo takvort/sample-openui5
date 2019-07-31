@@ -1,0 +1,27 @@
+<!DOCTYPE xml>
+<mvc:View controllerName="salesorders.controller.Items" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Page id="page" title="{i18n>appTitle}">
+		<subHeader>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Label text="{i18n>newItemLabel}" />
+					<Input placeholder="{i18n>newItemDescription}" value="{newItem>/description}" width="15rem" />
+					<Input placeholder="{i18n>newItemAmount}" value="{newItem>/amount}" width="5rem" />
+					<Button text="{i18n>addItem}" icon="sap-icon://add" press="onAddItem" type="Emphasized" />
+				</content>
+			</Toolbar>
+		</subHeader>
+		<content>
+			<List id="list" items="{items>/orderItems}">
+				<items>
+					<ObjectListItem title="{items>productId}" number="{items>grossAmount}" numberUnit="{items>grossCurrencyCode}" >
+						<attributes>
+							<ObjectAttribute text="{items>productDescription}"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</mvc:View>
