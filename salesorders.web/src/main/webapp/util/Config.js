@@ -2,6 +2,6 @@ sap.ui.define([], function() {
 	"use strict";
 
 	return {
-		serviceUrl : "https://test-rest-service-url"
+		serviceUrl : "https://sample-rest-service-url"
 	};
 });
