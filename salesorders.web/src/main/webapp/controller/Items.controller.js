@@ -19,19 +19,7 @@ sap.ui.define([
 			this.getView().setModel(itemsModel, "items");
 
 
-			itemsModel.attachRequestSent(function() {
-				this.getView().setBusy(true);
-			}, this);
-			itemsModel.attachRequestFailed(function() {
-				var messageBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
-				MessageBox.error(messageBundle.getText("generalError"));
-			}, this);
-			itemsModel.attachRequestCompleted(function() {
-				this.getView().setBusy(false);
-			}, this);
-			itemsModel.loadData(Config.serviceUrl + "/items");
 
-			/* Alternatively the model data can be loaded with jQuery.ajax
 			
 			jQuery.ajax({
 				type : "GET",
