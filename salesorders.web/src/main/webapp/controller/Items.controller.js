@@ -37,7 +37,7 @@ sap.ui.define([
 				this.getView().setBusy(false);
 			});
 			
-			*/
+			
 		},
 		
 		onAddItem : function(evt) {
